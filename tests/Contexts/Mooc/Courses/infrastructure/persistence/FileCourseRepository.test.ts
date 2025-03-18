@@ -7,6 +7,6 @@ describe('FileCourseRepository', () => {
     const repository = new FileCourseRepository();
     await repository.save(expectedCourse);
     const course = await repository.search(expectedCourse.id);
-    expect(course).toEqual(expectedCourse);
+    expect(expectedCourse).toEqual(course);
   });
 });
