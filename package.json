@@ -25,6 +25,7 @@
     "build:clean": "rm -r dist; exit 0"
   },
   "dependencies": {
+    "@types/uuid-validate": "^0.0.3",
     "body-parser": "^1.19.0",
     "bodybuilder": "^2.4.0",
     "bson": "^4.5.2",
@@ -36,7 +37,7 @@
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
-    "express-validator": "^6.12.2",
+    "express-validator": "^6.10.0",
     "glob": "^7.2.0",
     "helmet": "^4.6.0",
     "http-status": "^1.5.0",
@@ -44,6 +45,8 @@
     "nunjucks": "^3.2.3",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3",
+    "uuid": "^11.1.0",
+    "uuid-validate": "^0.0.3",
     "winston": "^3.3.3"
   },
   "devDependencies": {
@@ -62,6 +65,7 @@
     "@types/node": "^16.10.2",
     "@types/nunjucks": "^3.2.0",
     "@types/supertest": "^2.0.11",
+    "@types/uuid": "^10.0.0",
     "cucumber": "^6.0.5",
     "eslint": "^8.33.0",
     "eslint-config-codely": "^2.1.3",

@@ -3,14 +3,19 @@ import httpStatus from 'http-status';
 import { Controller } from './Controller';
 import { CourseCreator } from '../../../../Contexts/Mooc/Courses/application/CourseCreator';
 
-export class CoursePutController implements Controller {
+type CoursePutRequest = Request & {
+  id: string;
+  name: string;
+  duration: string;
+};
 
+export class CoursePutController implements Controller {
   constructor(private readonly courseCreator: CourseCreator) {}
 
   async run(req: Request, res: Response): Promise<void> {
-    const { id, name, duration } = req.body as { id: string; name: string; duration: string };
+    const { id, name, duration } = req.body as CoursePutRequest;
 
-    await this.courseCreator.run(id, name, duration);
+    await this.courseCreator.run({ id, name, duration });
 
     res.status(httpStatus.CREATED).send();
   }
