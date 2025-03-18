@@ -15,7 +15,7 @@ describe('CourseCreator', () => {
     const id = new Uuid('123e4567-e89b-12d3-a456-426614174000');
     const name = 'name';
     const duration = '5 hours';
-    const expectedCourse = new Course(id, name, duration);
+    const expectedCourse = new Course({ id, name, duration });
 
     await sut.run({ id: id.value, name, duration });
 
