@@ -1,4 +1,7 @@
+import { v4 as uuidv4 } from 'uuid';
 import validate from 'uuid-validate';
+
+import { InvalidArgumentError } from '../exceptions/InvalidArgumentError';
 
 export class Uuid {
   readonly value: string;
@@ -17,10 +20,8 @@ export class Uuid {
       throw new InvalidArgumentError(`<${this.constructor.name}> does not allow the value <${id}>.`);
     }
   }
-}
 
-export class InvalidArgumentError extends Error {
-  constructor(message: string) {
-    super(message);
+  static random(): Uuid {
+    return new Uuid(uuidv4());
   }
 }

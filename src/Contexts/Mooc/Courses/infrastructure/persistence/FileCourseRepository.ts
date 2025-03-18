@@ -3,7 +3,9 @@ import fs from 'fs';
 
 import { Course } from '../../domain/Course';
 import { CourseRepository } from '../../domain/CourseRepository';
-import { Uuid } from '../../../../Shared/domain/value-object/Uuid';
+import { CourseDuration } from '../../../Shared/domain/Courses/CourseDuration';
+import { CourseName } from '../../../Shared/domain/Courses/CourseName';
+import { CourseId } from '../../../Shared/domain/Courses/CourseId';
 
 export class FileCourseRepository implements CourseRepository {
   private readonly FILE_PATH = `${__dirname}/courses`;
@@ -17,7 +19,7 @@ export class FileCourseRepository implements CourseRepository {
     const courseData = await fs.promises.readFile(this.filePath(courseId));
     const { id, name, duration } = deserialize(courseData);
 
-    return new Course({ id: id as Uuid, name, duration });
+    return new Course({ id: id as CourseId, name: name as CourseName, duration: duration as CourseDuration });
   }
 
   private filePath(id: string): string {
