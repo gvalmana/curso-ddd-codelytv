@@ -1,5 +1,5 @@
 import { CourseName } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseName';
-import { WordMother } from '../../../../../src/Contexts/Shared/domain/value-object/WordMother';
+import { WordMother } from '../../../Shared/domain/WordMother';
 
 export class CourseNameMother {
   static create(value: string): CourseName {
@@ -7,7 +7,8 @@ export class CourseNameMother {
   }
 
   static random(): CourseName {
-    return this.create(WordMother.random({ maxLength: 30 }));
+    const value = WordMother.random({ maxLength: 30 });
+    return this.create(value);
   }
 
   static invalidName(): string {

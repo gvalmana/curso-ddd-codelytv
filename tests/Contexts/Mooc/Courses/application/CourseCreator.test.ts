@@ -1,7 +1,7 @@
 import { CourseCreator } from '../../../../../src/Contexts/Mooc/Courses/application/CourseCreator';
 import { CourseNameLengthExceeded } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseNameLengthExceeded';
 import { CourseRepositoryMock } from '../__mocks__/CourseRepositoryMock';
-import { CourseMother } from './CourseMother';
+import { CourseMother } from '../domain/CourseMother';
 import { CreateCourseRequestMothers } from './CreateCourseRequestMothers';
 
 describe('CourseCreator', () => {

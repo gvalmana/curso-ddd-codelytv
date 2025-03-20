@@ -2,9 +2,9 @@ import { CourseCreatorRequest } from '../../../../../src/Contexts/Mooc/Courses/a
 import { CourseDuration } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseDuration';
 import { CourseId } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseId';
 import { CourseName } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseName';
-import { CourseDurationMother } from './CourseDurationMother';
-import { CourseIdMother } from './CourseIdMother';
-import { CourseNameMother } from './CourseNameMother';
+import { CourseDurationMother } from '../domain/CourseDurationMother';
+import { CourseIdMother } from '../domain/CourseIdMother';
+import { CourseNameMother } from '../domain/CourseNameMother';
 
 export class CreateCourseRequestMothers {
   static create(id: CourseId, name: CourseName, duration: CourseDuration): CourseCreatorRequest {

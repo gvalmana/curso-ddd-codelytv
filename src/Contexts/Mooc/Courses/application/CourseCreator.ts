@@ -16,8 +16,8 @@ export class CourseCreator {
     const id = new CourseId(request.id);
     const name = new CourseName(request.name);
     const duration = new CourseDuration(request.duration);
-    const course = new Course({ id, name, duration });
+    const course = new Course(id, name, duration);
 
-    return this.repository.save(course);
+    await this.repository.save(course);
   }
 }

@@ -1,5 +1,5 @@
 import { CourseDuration } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseDuration';
-import { SelectMother } from '../../../../../src/Contexts/Shared/domain/value-object/SelectMother';
+import { SelectMother } from '../../../Shared/domain/SelectMother';
 
 export class CourseDurationMother {
   static random(): CourseDuration {
