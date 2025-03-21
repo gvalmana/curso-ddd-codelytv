@@ -1,8 +1,8 @@
 import { CourseCreatorRequest } from '../../../../../src/Contexts/Mooc/Courses/application/CourseCreatorRequest';
 import { Course } from '../../../../../src/Contexts/Mooc/Courses/domain/Course';
-import { CourseDuration } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseDuration';
+import { CourseDuration } from '../../../../../src/Contexts/Mooc/Courses/domain/CourseDuration';
 import { CourseId } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseId';
-import { CourseName } from '../../../../../src/Contexts/Mooc/Shared/domain/Courses/CourseName';
+import { CourseName } from '../../../../../src/Contexts/Mooc/Courses/domain/CourseName';
 import { CourseDurationMother } from './CourseDurationMother';
 import { CourseIdMother } from './CourseIdMother';
 import { CourseNameMother } from './CourseNameMother';

@@ -1,7 +1,7 @@
 import { AggregateRoot } from '../../../Shared/domain/AggregateRoot';
 import { CourseId } from '../../Shared/domain/Courses/CourseId';
-import { CourseName } from '../../Shared/domain/Courses/CourseName';
-import { CourseDuration } from '../../Shared/domain/Courses/CourseDuration';
+import { CourseName } from './CourseName';
+import { CourseDuration } from './CourseDuration';
 
 export class Course extends AggregateRoot {
   readonly id: CourseId;

@@ -2,8 +2,8 @@ import { Course } from '../domain/Course';
 import { CourseRepository } from '../domain/CourseRepository';
 import { CourseCreatorRequest } from './CourseCreatorRequest';
 import { CourseId } from '../../Shared/domain/Courses/CourseId';
-import { CourseDuration } from '../../Shared/domain/Courses/CourseDuration';
-import { CourseName } from '../../Shared/domain/Courses/CourseName';
+import { CourseDuration } from '../domain/CourseDuration';
+import { CourseName } from '../domain/CourseName';
 
 export class CourseCreator {
   private readonly repository: CourseRepository;
